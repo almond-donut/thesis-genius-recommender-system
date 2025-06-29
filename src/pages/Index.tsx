@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -60,11 +59,19 @@ const Index = () => {
     setRecommendations(null);
   };
 
-  const submitToGemini = async (data) => {
+  const submitToGemini = async (data: any) => {
     const API_KEY = 'AIzaSyCZ0LGY-09e_pux5WEshHpioaiUdJ0aX8w';
     const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
 
-    const prompt = `You are an expert academic advisor for Information Systems students. Based on the student profile below, recommend 5 thesis topics using data mining clustering concepts.
+    const transcriptInfo = data.transcriptAnalysis ? `
+Academic Performance Analysis:
+- IPK: ${data.transcriptAnalysis.gpa}
+- Strongest Areas: ${data.transcriptAnalysis.strongSubjects.map((s: any) => `${s.course} (${s.grade})`).join(', ')}
+- Good Performance: ${data.transcriptAnalysis.decentSubjects.map((s: any) => `${s.course} (${s.grade})`).join(', ')}
+- Academic Pattern: ${data.transcriptAnalysis.pattern}
+` : '';
+
+    const prompt = `You are an expert academic advisor for Information Systems students. Based on the student profile and academic transcript below, recommend 5 thesis topics using data mining clustering concepts.
 
 Student Profile:
 - Name: ${data.name}
@@ -76,10 +83,12 @@ Student Profile:
 - Preferred Type: ${data.thesisType}
 - Difficulty: ${data.difficulty}
 
+${transcriptInfo}
+
 Please provide recommendations in this JSON format:
 {
-  "cluster_analysis": "Brief explanation of which student cluster this profile belongs to",
-  "academic_strengths": "Analysis of student's academic areas",
+  "cluster_analysis": "Brief explanation of which student cluster this profile belongs to based on academic performance and interests",
+  "academic_strengths": "Analysis of student's strongest academic areas based on ${data.transcriptAnalysis ? 'transcript' : 'profile'}",
   "recommendations": [
     {
       "title": "Thesis title",
@@ -87,16 +96,17 @@ Please provide recommendations in this JSON format:
       "difficulty": "Beginner/Intermediate/Advanced",
       "compatibility_score": 85,
       "description": "Brief description",
-      "why_suitable": "Why this fits the student profile",
+      "why_suitable": "Why this fits the student profile${data.transcriptAnalysis ? ' AND academic strengths from transcript' : ''}",
       "required_skills": ["skill1", "skill2"],
+      ${data.transcriptAnalysis ? '"leverages_strengths": ["course1", "course2"],' : ''}
       "estimated_duration": "4-6 months",
       "similar_projects": "Examples of similar applications"
     }
   ],
-  "skill_recommendations": "Suggested skills to develop"
+  "skill_recommendations": "Suggested skills to develop${data.transcriptAnalysis ? ' based on transcript gaps' : ''}"
 }
 
-Focus on practical, implementable thesis topics.`;
+Focus on practical, implementable thesis topics${data.transcriptAnalysis ? ' that leverage the student\'s proven academic strengths while addressing their interests' : ''}.`;
 
     const response = await fetch(`${API_URL}?key=${API_KEY}`, {
       method: 'POST',

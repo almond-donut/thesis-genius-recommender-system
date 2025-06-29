@@ -6,7 +6,11 @@ import StepTwo from './ProfileForm/StepTwo';
 import StepThree from './ProfileForm/StepThree';
 import StepFour from './ProfileForm/StepFour';
 
-const ProfileForm = ({ onSubmit, darkMode, initialData = {} }) => {
+const ProfileForm = ({ onSubmit, darkMode, initialData = {} }: {
+  onSubmit: (data: any) => void;
+  darkMode: boolean;
+  initialData?: any;
+}) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -18,6 +22,7 @@ const ProfileForm = ({ onSubmit, darkMode, initialData = {} }) => {
     favoriteSubjects: [],
     thesisType: '',
     difficulty: 'intermediate',
+    transcriptAnalysis: null,
     ...initialData
   });
 
@@ -39,7 +44,7 @@ const ProfileForm = ({ onSubmit, darkMode, initialData = {} }) => {
     onSubmit(formData);
   };
 
-  const updateFormData = (data) => {
+  const updateFormData = (data: any) => {
     setFormData(prev => ({ ...prev, ...data }));
   };
 

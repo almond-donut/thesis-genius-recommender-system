@@ -1,7 +1,16 @@
 
 import React from 'react';
 
-const LoadingAnimation = ({ darkMode }) => {
+interface LoadingStepProps {
+  step: string;
+  title: string;
+  completed?: boolean;
+  loading?: boolean;
+  pending?: boolean;
+  darkMode: boolean;
+}
+
+const LoadingAnimation = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <div className="max-w-2xl mx-auto text-center py-16">
       <div className="mb-8">
@@ -76,7 +85,7 @@ const LoadingAnimation = ({ darkMode }) => {
   );
 };
 
-const LoadingStep = ({ step, title, completed, loading, pending, darkMode }) => {
+const LoadingStep = ({ step, title, completed = false, loading = false, pending = false, darkMode }: LoadingStepProps) => {
   return (
     <div className="flex items-center space-x-3">
       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
