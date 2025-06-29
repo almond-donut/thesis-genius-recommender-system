@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
@@ -9,10 +8,41 @@ const StepThree = ({ formData, updateFormData, darkMode }) => {
   ];
 
   const favoriteSubjects = [
-    'Pemrograman Berbasis Objek', 'Manajemen Basis Data', 'Sistem Pendukung Keputusan',
-    'Keamanan Sistem Informasi', 'Analisis dan Perancangan SI', 'Data Mining',
-    'Rekayasa Perangkat Lunak', 'Manajemen Proyek SI', 'E-Business',
-    'Sistem Operasi', 'Jaringan Komputer', 'Matematika Diskrit'
+    'Matematika Diskrit',
+    'Arsitektur Teknologi Informasi',
+    'Algoritma dan Struktur Data T/P',
+    'Manajemen Data Center',
+    'Interaksi Manusia dan Komputer',
+    'Pemrograman Berbasis Objek',
+    'Sistem Pendukung Keputusan',
+    'Keamanan Sistem Informasi',
+    'Pemrograman Mobile',
+    'Business Intelligence',
+    'Analisa dan Perancangan Sistem Informasi',
+    'Manajemen SDM dan Organisasi',
+    'Metodologi Penelitian',
+    'Pengujian dan Implementasi Sistem Informasi',
+    'Statistik Dasar',
+    'Pemrograman Visual',
+    'Sistem Informasi Manajemen',
+    'Sistem Operasi',
+    'Manajemen Basis Data',
+    'Matrik dan Vektor',
+    'Analisa Big Data',
+    'Pemrograman Web',
+    'Cloud Computing',
+    'Desain dan Manajemen Jaringan Komputer',
+    'E-Commerce',
+    'Pendidikan Agama',
+    'Pancasila',
+    'Bahasa Indonesia',
+    'Kewarganegaraan',
+    'Bahasa Inggris',
+    'Kewiraan Yos Sudarso',
+    'Komunikasi Interpersonal',
+    'Ilmu Sosial Budaya Dasar',
+    'Etika Profesi',
+    'Kewirausahaan'
   ];
 
   const toggleSkill = (skill) => {
@@ -132,7 +162,7 @@ const StepThree = ({ formData, updateFormData, darkMode }) => {
         }`}>
           Mata Kuliah Favorit
         </label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-80 overflow-y-auto">
           {favoriteSubjects.map((subject) => {
             const isSelected = formData.favoriteSubjects?.includes(subject) || false;
             
