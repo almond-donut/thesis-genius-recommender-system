@@ -1,6 +1,8 @@
 # 🎓 Thesis Genius Recommender System
 
 Rekomendasi topik skripsi berbasis IPK, minat mata kuliah, dan proyek terakhir mahasiswa. Sistem ini memanfaatkan **K-Means Clustering** dan **prompting LLM (Gemini API)** untuk menghasilkan rekomendasi yang dipersonalisasi.
+Link : https://lovable.dev/projects/2195d297-3bcf-426c-b825-47edeb4463eb
+
 
 ---
 
