@@ -60,7 +60,7 @@ const Index = () => {
   };
 
   const submitToGemini = async (data: any) => {
-    const API_KEY = 'AIzaSyCZ0LGY-09e_pux5WEshHpioaiUdJ0aX8w';
+    const API_KEY = 'AIzaSyDDMOMJcbqlTuEvT4ME8edeq7Q5ErxzlW0';
     const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
 
     const transcriptInfo = data.transcriptAnalysis ? `
