@@ -61,7 +61,7 @@ const StepTwo = ({ formData, updateFormData, darkMode }) => {
               onClick={() => toggleInterest(interest.id)}
               className={`relative p-4 rounded-xl border-2 transition-all duration-300 text-left hover:scale-105 ${
                 isSelected
-                  ? 'border-blue-500 bg-gradient-to-r from-blue-500/10 to-purple-500/10'
+                  ? 'border-blue-500 bg-blue-500/10'
                   : darkMode
                   ? 'border-gray-600 bg-gray-700/50 hover:border-gray-500'
                   : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm'

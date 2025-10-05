@@ -101,7 +101,7 @@ All colors MUST be HSL.
 /* Custom slider styles */
 .slider {
   -webkit-appearance: none;
-  background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+  background: #3B82F6;
   outline: none;
   border-radius: 6px;
 }

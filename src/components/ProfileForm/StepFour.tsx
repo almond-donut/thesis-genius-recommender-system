@@ -77,7 +77,7 @@ const StepFour = ({ formData, updateFormData, darkMode }) => {
                 onClick={() => updateFormData({ thesisType: type.id })}
                 className={`p-4 rounded-xl border-2 transition-all duration-300 text-left hover:scale-105 ${
                   isSelected
-                    ? 'border-blue-500 bg-gradient-to-r from-blue-500/10 to-purple-500/10'
+                    ? 'border-blue-500 bg-blue-500/10'
                     : darkMode
                     ? 'border-gray-600 bg-gray-700/50 hover:border-gray-500'
                     : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm'
@@ -135,7 +135,7 @@ const StepFour = ({ formData, updateFormData, darkMode }) => {
                 onClick={() => updateFormData({ difficulty: level.value })}
                 className={`w-full p-4 rounded-xl border-2 transition-all duration-300 text-left hover:scale-105 ${
                   isSelected
-                    ? 'border-green-500 bg-gradient-to-r from-green-500/10 to-blue-500/10'
+                    ? 'border-green-500 bg-green-500/10'
                     : darkMode
                     ? 'border-gray-600 bg-gray-700/50 hover:border-gray-500'
                     : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm'

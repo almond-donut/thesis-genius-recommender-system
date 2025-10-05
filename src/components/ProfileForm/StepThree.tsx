@@ -112,7 +112,7 @@ const StepThree = ({ formData, updateFormData, darkMode }) => {
                 onClick={() => toggleSkill(language)}
                 className={`relative p-3 rounded-lg border-2 transition-all duration-300 text-center hover:scale-105 ${
                   isSelected
-                    ? 'border-green-500 bg-gradient-to-r from-green-500/10 to-blue-500/10'
+                    ? 'border-green-500 bg-green-500/10'
                     : darkMode
                     ? 'border-gray-600 bg-gray-700/50 hover:border-gray-500'
                     : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm'
@@ -172,7 +172,7 @@ const StepThree = ({ formData, updateFormData, darkMode }) => {
                 onClick={() => toggleSubject(subject)}
                 className={`relative p-3 rounded-lg border-2 transition-all duration-300 text-left hover:scale-105 ${
                   isSelected
-                    ? 'border-purple-500 bg-gradient-to-r from-purple-500/10 to-blue-500/10'
+                    ? 'border-purple-500 bg-purple-500/10'
                     : darkMode
                     ? 'border-gray-600 bg-gray-700/50 hover:border-gray-500'
                     : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm'

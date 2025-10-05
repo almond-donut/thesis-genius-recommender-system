@@ -141,8 +141,8 @@ Focus on practical, implementable thesis topics${data.transcriptAnalysis ? ' tha
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
       darkMode 
-        ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900' 
-        : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
+        ? 'bg-gray-900' 
+        : 'bg-gray-50'
     }`}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       

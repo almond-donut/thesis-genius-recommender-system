@@ -64,7 +64,7 @@ const RecommendationCard = ({ recommendation, index, isExpanded, onToggle, darkM
           </div>
 
           {/* Compatibility Score */}
-          <div className={`ml-4 p-4 rounded-xl bg-gradient-to-br ${getScoreBgColor(recommendation.compatibility_score)} border`}>
+          <div className={`ml-4 p-4 rounded-xl ${getScoreBgColor(recommendation.compatibility_score)} border`}>
             <div className="text-center">
               <div className={`text-2xl font-bold ${getScoreColor(recommendation.compatibility_score)}`}>
                 {recommendation.compatibility_score}%

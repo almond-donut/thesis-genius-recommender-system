@@ -12,8 +12,8 @@ const ClusterAnalysis = ({
   return (
     <div className={`mb-8 p-6 rounded-2xl ${
       darkMode 
-        ? 'bg-gradient-to-r from-indigo-900/30 to-purple-900/30 backdrop-blur-lg border border-indigo-700' 
-        : 'bg-gradient-to-r from-indigo-50 to-purple-50 backdrop-blur-lg border border-indigo-200 shadow-lg'
+        ? 'bg-indigo-900/30 backdrop-blur-lg border border-indigo-700' 
+        : 'bg-indigo-50 backdrop-blur-lg border border-indigo-200 shadow-lg'
     }`}>
       <div className="text-center mb-6">
         <div className={`inline-flex p-4 rounded-full mb-4 ${

@@ -29,7 +29,7 @@ const Hero = ({ onStart, darkMode }) => {
           darkMode ? 'text-white' : 'text-gray-900'
         }`}>
           Temukan Judul{' '}
-          <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <span className="text-blue-600 dark:text-blue-400">
             Tugas Akhir
           </span>{' '}
           Terbaik
@@ -45,7 +45,7 @@ const Hero = ({ onStart, darkMode }) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <button
             onClick={onStart}
-            className="group flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="group flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <span>Mulai Sekarang</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

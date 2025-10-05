@@ -99,7 +99,7 @@ const ProfileForm = ({ onSubmit, darkMode, initialData = {} }: {
           darkMode ? 'bg-gray-700' : 'bg-gray-200'
         }`}>
           <div 
-            className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-300"
+            className="h-full bg-blue-600 rounded-full transition-all duration-300"
             style={{ width: `${(currentStep / totalSteps) * 100}%` }}
           />
         </div>
@@ -140,7 +140,7 @@ const ProfileForm = ({ onSubmit, darkMode, initialData = {} }: {
                 !isStepValid()
                   ? 'opacity-50 cursor-not-allowed'
                   : 'hover:scale-105 shadow-lg hover:shadow-xl'
-              } bg-gradient-to-r from-blue-500 to-purple-600 text-white`}
+              } bg-blue-600 hover:bg-blue-700 text-white`}
             >
               <span>Selanjutnya</span>
               <ChevronRight className="w-4 h-4" />
@@ -153,7 +153,7 @@ const ProfileForm = ({ onSubmit, darkMode, initialData = {} }: {
                 !isStepValid()
                   ? 'opacity-50 cursor-not-allowed'
                   : 'hover:scale-105 shadow-lg hover:shadow-xl'
-              } bg-gradient-to-r from-green-500 to-blue-600 text-white`}
+              } bg-green-600 hover:bg-green-700 text-white`}
             >
               Dapatkan Rekomendasi
             </button>
